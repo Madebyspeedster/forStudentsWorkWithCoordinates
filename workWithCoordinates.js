@@ -5,8 +5,9 @@ function addLabel(element, text) {
     console.log(coordinates);
     const message = document.createElement("p");
     message.style.cssText = `
-            position: fixed; top: ${coordinates.top - 15}px;
-            left: ${coordinates.left}px;
+            position: fixed; 
+            top: ${coordinates.top - 10}px;
+            left: ${(coordinates.left) }px;
             color: orangered;
             font-weight: bold;
         `;
