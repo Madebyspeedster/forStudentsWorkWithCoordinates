@@ -4,16 +4,19 @@ function addLabel(element, text) {
     const coordinates = el.getBoundingClientRect();
     console.log(coordinates);
     const message = document.createElement("p");
-    message.style.cssText = `
-            position: fixed; 
-            top: ${coordinates.top - 10}px;
-            left: ${(coordinates.left) }px;
+    el.onmouseover = () => {
+        message.style.cssText = `
+            position: absolute; 
+            top: ${coordinates.top - 20}px;
+            left: ${coordinates.left}px;
             color: orangered;
             font-weight: bold;
+            margin:0;
         `;
-    message.textContent = text;
-    el.onmouseover = () => document.body.appendChild(message);
+        message.textContent = text;
+        document.body.appendChild(message);
+    };
     el.onmouseleave = () => document.body.removeChild(message);
 }
 
-addLabel(el, "That is True!)!");
+addLabel(el, "That is True)!");
