@@ -46,11 +46,6 @@ const _app = {
 		},
 		calculateCoordinatesForTooltip(el,tooltip) {
 			const currentPosition  = this.getElementPosition(el);
-			console.log({
-				position: 'absolute',
-				top: `${(currentPosition.top + pageYOffset) - (parseFloat(tooltip.style.height) + 5)}px`,
-				left: `${(currentPosition.left + pageXOffset) - (parseFloat(tooltip.style.width) / 2)}px`
-			})
 			return {
 				position: 'absolute',
 				top: `${(currentPosition.top + pageYOffset) - (parseFloat(tooltip.style.height) + 5)}px`,
